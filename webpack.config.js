@@ -37,13 +37,13 @@ module.exports = {
     // 防止第三方的文件每次打包都生成一个新的vendor的hash值
     new webpack.HashedModuleIdsPlugin(), 
     // 将第三方模块单独打包出来
-    new webpack.optimize.CommonsChunkPlugin({
-      name:'vendor'
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //   name:'vendor'
+    // }),
     // 防止重复打包的模块
-    new webpack.optimize.CommonsChunkPlugin({
-       name: 'common' // 指定公共 bundle 的名称。
-    }),
+    // new webpack.optimize.CommonsChunkPlugin({
+    //    name: 'common' // 指定公共 bundle 的名称。
+    // }),
    
   ],
   output: {

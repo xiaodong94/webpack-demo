@@ -9,9 +9,6 @@
     "start": "webpack-dev-server --open",
     "watch": "webpack --watch",
     "server": "node server --hotOnly"
-    // 生产环境构建
-    // "start":"webpack-dev-server --open --config webpack.dev.js",
-    // "build":"webpack --config webpack.prod.js"
   },
   "sideEffect": false,
   "keywords": [],
