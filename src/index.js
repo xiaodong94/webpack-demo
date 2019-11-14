@@ -1,14 +1,22 @@
 import _ from 'lodash';
-import numRef from './ref.json';
+import printMe from './print.js';
+import './style.css';
+  function component() {
+    var element = document.createElement('div');
+    var btn = document.createElement('button');
 
-export function numToWord(num) {
-  return _.reduce(numRef, (accum, ref) => {
-    return ref.num === num ? ref.word : accum;
-  }, '');
-};
+  // Lodash, currently included via a script, is required for this line to work
+  // Lodash, now imported by this script
+    element.innerHTML = _.join(['Hello', 'webpack'], ' ');
 
-export function wordToNum(word) {
-  return _.reduce(numRef,(accum,ref) => {
-    return ref.word === word && word.toLowerCase() ? ref.num : accum;
-  })
-}
+    btn.innerHTML = 'Click me and check the console!';
+    btn.onclick = printMe;
+
+    element.appendChild(btn);
+
+    //element.classList.add('hello');
+
+    return element;
+  }
+
+  document.body.appendChild(component());
