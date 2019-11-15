@@ -5,6 +5,11 @@
   改变；
   错误写法--
   const CleanWebpackPlugin = require("clean-webpack-plugin");
+  plugins: [
+    new CleanWebpackPlugin(['dist'])
+  ]
   正确写法--
   const { CleanWebpackPlugin } = require("clean-webpack-plugin");
-
+  plugins: [
+    new CleanWebpackPlugin()
+  ]

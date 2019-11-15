@@ -26,7 +26,10 @@ module.exports = {
   output: {
     // filename: 'bundle.js',
     filename: '[name].bundle.js',
-    path: path.resolve(__dirname, 'dist')
+    path: path.resolve(__dirname, 'dist'),
+    // publicPath也会在服务器脚本中用到，以确保文件资源能够在http://localhost:3000下正常访问，
+    
+    publicPath: '/'
   },
   module: {
         rules: [
