@@ -1,19 +1,18 @@
-
 {
   "name": "webpack-demo",
   "sideEffects": [
     "./src/some-side-effectful-file.js",
     "*.css"
-  ], 
+  ],
   "version": "1.0.0",
   "description": "",
   "private": true,
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "build": "webpack",
+    "build": "webpack --config webpack.prod.js",
     "watch": "webpack --watch",
-    "start": "webpack-dev-server --hotOnly",
+    "start": "webpack-dev-server --hotOnly --config webpack.dev.js",
     "server": "node server.js"
   },
   "keywords": [],
@@ -31,9 +30,11 @@
     "webpack-cli": "3.1.1",
     "webpack-dev-middleware": "^3.7.2",
     "webpack-dev-server": "^3.9.0",
+    "webpack-merge": "^4.2.2",
     "xml-loader": "^1.2.1"
   },
   "dependencies": {
-    "lodash": "^4.17.15"
+    "lodash": "^4.17.15",
+    "uglifyjs-webpack-plugin": "^2.2.0"
   }
 }

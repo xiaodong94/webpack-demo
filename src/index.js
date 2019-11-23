@@ -2,6 +2,10 @@ import _ from 'lodash';
 import { cube } from './math.js';
 import printMe from './print.js';
 import './style.css';
+
+if (process.env.NODE_ENV !== 'production') {
+     console.log('-----Looks like we are in development mode!----');
+ }
   function component() {
     var element = document.createElement('div');
     var element1 = document.createElement('pre');
